@@ -1,0 +1,20 @@
+.btnContainer{
+  width: 800px;
+  font-size: 30px;
+  display: block;
+
+}
+
+.feedbackBtn{
+  width: 200px;
+  height: 60px;
+  margin: 5px;
+  border-radius: 15px;
+  border: 3px solid #006262;
+}
+
+.feedbackBtn:hover{
+ background-color: #F4CA16;
+
+
+}
