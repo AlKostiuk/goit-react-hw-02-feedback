@@ -1,4 +1,4 @@
-
+import PropTypes from 'prop-types';
 import style from './statistics.module.css'
 
 import Notification from 'components/Notification/Notification';
@@ -21,5 +21,13 @@ const Statistics = ({ items, total, positivePercentage }) => {
     </div>
   );
 };
-
+Statistics.propTypes = {
+  items: PropTypes.shape({
+    good: PropTypes.number.isRequired,
+    neutral: PropTypes.number.isRequired,
+    bad: PropTypes.number.isRequired,
+  }).isRequired,
+  total: PropTypes.number.isRequired,
+  positivePercentage: PropTypes.number.isRequired,
+};
 export default Statistics;

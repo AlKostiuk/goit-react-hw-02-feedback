@@ -1,4 +1,4 @@
-
+import PropTypes from 'prop-types';
 import style from './feedback.module.css'
 
 
@@ -22,6 +22,15 @@ const FeedBack = ({ clickForFeedback, items }) => {
       </button>
     </div>
   );
+};
+
+FeedBack.propTypes = {
+  clickForFeedback: PropTypes.func.isRequired,
+  items: PropTypes.shape({
+    good: PropTypes.number.isRequired,
+    neutral: PropTypes.number.isRequired,
+    bad: PropTypes.number.isRequired,
+  }).isRequired,
 };
 
 export default FeedBack;
